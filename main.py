@@ -3,7 +3,7 @@ from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import CommandStart
 from config import BOT_TOKEN, WEBHOOK_URL
 
-bot = Bot(8169291502:AAHdi7rdUpl8cVNvl9zyUcMzdjpJLanVm5I)
+bot = Bot(BOT_TOKEN)
 dp = Dispatcher()
 
 questions = [
@@ -76,7 +76,7 @@ async def answer(message: types.Message):
 
 async def main():
     if WEBHOOK_URL:
-        await bot.set_webhook(https://apolinarizz-game.onrender.com)
+        await bot.set_webhook(WEBHOOK_URL)
         from aiohttp import web
 
         async def handler(request):
